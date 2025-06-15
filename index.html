@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Design Studio - Graphics & Social Media Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>SS Design Studio</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="floating-text">Creative</span>
+                    <span class="floating-text">Design</span>
+                    <span class="floating-text">Solutions</span>
+                </h1>
+                <p class="hero-subtitle">We bring your brand to life with stunning graphics and powerful social media management</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-secondary">View Portfolio</button>
+                </div>
+            </div>
+            <div class="hero-3d">
+                <div class="floating-card card-1">
+                    <i class="fas fa-palette"></i>
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Social Media</h3>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-magic"></i>
+                    <h3>Branding</h3>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="geometric-shape shape-1"></div>
+            <div class="geometric-shape shape-2"></div>
+            <div class="geometric-shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive design solutions for your business</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Logo design, branding, print materials, and digital graphics that make your brand stand out.</p>
+                    <ul>
+                        <li>Logo & Brand Identity</li>
+                        <li>Print Design</li>
+                        <li>Digital Graphics</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Management</h3>
+                    <p>Complete social media strategy, content creation, and community management for all platforms.</p>
+                    <ul>
+                        <li>Content Strategy</li>
+                        <li>Post Creation</li>
+                        <li>Community Management</li>
+                        <li>Analytics & Reporting</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Production</h3>
+                    <p>Engaging video content for social media, promotional videos, and animated graphics.</p>
+                    <ul>
+                        <li>Social Media Videos</li>
+                        <li>Promotional Content</li>
+                        <li>Motion Graphics</li>
+                        <li>Video Editing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-subtitle">Showcasing our creative excellence</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="graphics">Graphics</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="fashion">
+                    <div class="portfolio-image">
+                        <img src="IMG/saree_3.png" alt="Fashion Design">
+                        <div class="portfolio-overlay">
+                            <h3>Fashion Design</h3>
+                            <p>Elegant saree collection showcase</p>
+                            <button class="portfolio-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="fashion">
+                    <div class="portfolio-image">
+                        <img src="IMG/saree_4.jpg" alt="Fashion Catalog">
+                        <div class="portfolio-overlay">
+                            <h3>Fashion Catalog</h3>
+                            <p>Premium textile design</p>
+                            <button class="portfolio-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="fashion">
+                    <div class="portfolio-image">
+                        <img src="IMG/saree_5.png" alt="Brand Identity">
+                        <div class="portfolio-overlay">
+                            <h3>Brand Identity</h3>
+                            <p>Complete branding solution</p>
+                            <button class="portfolio-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="fashion">
+                    <div class="portfolio-image">
+                        <img src="IMG/saree_6.png" alt="Digital Campaign">
+                        <div class="portfolio-overlay">
+                            <h3>Digital Campaign</h3>
+                            <p>Social media marketing</p>
+                            <button class="portfolio-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="fashion">
+                    <div class="portfolio-image">
+                        <img src="IMG/saree_9.jpg" alt="Fashion Photography">
+                        <div class="portfolio-overlay">
+                            <h3>Fashion Photography</h3>
+                            <p>Professional product shots</p>
+                            <button class="portfolio-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="fashion">
+                    <div class="portfolio-image">
+                        <img src="IMG/saree_10.jpg" alt="Collection Showcase">
+                        <div class="portfolio-overlay">
+                            <h3>Collection Showcase</h3>
+                            <p>Luxury fashion presentation</p>
+                            <button class="portfolio-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About SS Design Studio</h2>
+                    <p>We are a creative design studio specializing in graphics design and social media management. With years of experience in the industry, we help businesses create compelling visual identities and engage with their audience effectively.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>25+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="rotating-cube">
+                        <div class="cube-face front">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="cube-face back">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="cube-face right">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="cube-face left">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="cube-face top">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="cube-face bottom">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to start your next project?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>hello@ssdesignstudio.com</p>
+                    </div>                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/918840134119" target="_blank" class="whatsapp-link">+91 884 013 4119</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:+918840134119" class="phone-link">+91 884 013 4119</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Design District, Creative City</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SS Design Studio</h3>
+                    <p>Creating beautiful designs and managing your social media presence with creativity and passion.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Social Media Management</a></li>
+                        <li><a href="#">Brand Identity</a></li>
+                        <li><a href="#">Video Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SS Design Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/918840134119?text=Hello%20SS%20Design%20Studio!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

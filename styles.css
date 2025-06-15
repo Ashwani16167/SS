@@ -954,6 +954,7 @@ body {
     
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .stats {
@@ -993,6 +994,25 @@ body {
     .cube-face.left { transform: rotateY(-90deg) translateZ(75px); }
     .cube-face.top { transform: rotateX(90deg) translateZ(75px); }
     .cube-face.bottom { transform: rotateX(-90deg) translateZ(75px); }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-form {
+        padding: 1rem;
+    }
+    .form-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .input-container {
+        width: 100%;
+    }
+    .contact-form .btn {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1015,5 +1035,20 @@ body {
     
     .floating-card i {
         font-size: 2rem;
+    }
+    
+    .contact-form {
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+    .form-group {
+        gap: 0.3rem;
+    }
+    .input-container label {
+        font-size: 0.9rem;
+    }
+    .contact-form .btn {
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
     }
 }

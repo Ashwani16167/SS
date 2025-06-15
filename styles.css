@@ -1012,44 +1012,46 @@ body {
     
     .navbar {
         padding: 0.8rem 0;
-    }
-      .hero {
+    }      .hero {
         height: auto;
         min-height: 100vh;
         padding-top: 80px;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
         position: relative;
         z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
-    
-    .hero-content {
+      .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 0;
         padding: 0 1rem;
         margin-top: 0;
-        height: auto;
-        min-height: auto;
+        height: 100%;
+        min-height: calc(100vh - 160px);
         max-width: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-grow: 1;
-    }    .hero-3d {
-        height: 260px;
-        margin: 1rem 0;
+    }.hero-3d {
+        height: auto;
+        min-height: 200px;
+        margin: 2rem 0 1rem 0;
         order: 1;
         position: relative;
         z-index: 1;
         width: 100%;
-        flex-shrink: 0;
+        flex-grow: 1;
         overflow: visible;
         padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }    /* Show floating cards on mobile in triangle formation */
     .hero-3d .floating-card {
         position: absolute !important;
@@ -1059,50 +1061,48 @@ body {
         padding: 0.7rem !important;
         font-size: 0.8rem !important;
         display: block !important;
-    }
-      /* Triangle formation: Top card */
+        animation: float 6s ease-in-out infinite !important;
+    }    /* Triangle formation: Top card */
     .hero-3d .card-1 {
-        top: 20px !important;
-        left: 50% !important;
+        top: 30px !important;
+        left: calc(50% - 45px) !important;
         right: auto !important;
         bottom: auto !important;
-        transform: translateX(-50%) !important;
+        transform: none !important;
     }
     
     /* Triangle formation: Bottom left card */
     .hero-3d .card-2 {
-        top: 140px !important;
-        left: 25% !important;
+        top: 120px !important;
+        left: calc(30% - 45px) !important;
         right: auto !important;
         bottom: auto !important;
-        transform: translateX(-50%) !important;
+        transform: none !important;
     }
     
     /* Triangle formation: Bottom right card */
     .hero-3d .card-3 {
-        top: 140px !important;
+        top: 120px !important;
+        right: calc(30% - 45px) !important;
         left: auto !important;
-        right: 25% !important;
         bottom: auto !important;
-        transform: translateX(50%) !important;
+        transform: none !important;
     }
     
     /* Remove the CSS pseudo-element since we're using real cards */
     .hero-3d::after {
         display: none;
-    }
-    
-    .hero-text {
+    }    .hero-text {
         order: 2;
-        margin-top: 2rem;
+        margin-top: auto;
         position: relative;
         z-index: 10;
-        background: rgba(0, 0, 0, 0.5);
+        background: transparent;
         padding: 2rem 1.5rem;
-        border-radius: 20px;
-        backdrop-filter: blur(15px);
+        border-radius: 0;
+        backdrop-filter: none;
         flex-shrink: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
       .services {
         padding: 4rem 0;
@@ -1702,19 +1702,18 @@ body {
         line-height: 1.1;
         margin: 0;
         font-weight: 600;
-    }
-      /* Staggered animations for triangle cards */
+    }    /* Staggered animations for triangle cards */
     .hero-3d .card-1 {
-        animation-duration: 8s !important;
+        animation: float 8s ease-in-out infinite !important;
         animation-delay: 0s !important;
     }
     
     .hero-3d .card-2 {
-        animation-duration: 9s !important;
+        animation: float 9s ease-in-out infinite !important;
         animation-delay: 1s !important;
     }
     
     .hero-3d .card-3 {
-        animation-duration: 10s !important;
+        animation: float 10s ease-in-out infinite !important;
         animation-delay: 2s !important;
     }

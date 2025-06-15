@@ -1036,10 +1036,15 @@ body {
         align-self: flex-end;
         width: 100%;
     }
-    
-    .hero-text {
+      .hero-text {
         order: 2;
         margin-top: 1rem;
+        position: relative;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1.5rem;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
     }
     
     .hero-3d {
@@ -1047,6 +1052,13 @@ body {
         margin-top: 0;
         order: 1;
         margin-bottom: 1rem;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .floating-card {
+        z-index: 2;
+        position: absolute;
     }
     
     .services {
@@ -1084,20 +1096,25 @@ body {
     .hero-3d {
         height: 300px;
     }
-    
-    .floating-card {
+      .floating-card {
         padding: 1rem;
+        position: relative;
+        z-index: 2;
+        margin: 0.5rem auto;
+        display: block;
+        width: 180px;
+        position: static;
     }
     
     .card-1, .card-2, .card-3 {
-        position: relative;
+        position: static;
         top: auto;
         left: auto;
         right: auto;
         bottom: auto;
-        margin: 1rem auto;
+        margin: 0.5rem auto;
         display: block;
-        width: 200px;
+        width: 180px;
     }
     
     .services-grid {
@@ -1234,10 +1251,15 @@ body {
         display: flex;
         flex-direction: column;
     }
-    
-    .hero-text {
+      .hero-text {
         order: 2;
         margin-top: 0.5rem;
+        position: relative;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
     }
     
     .hero-3d {
@@ -1245,6 +1267,8 @@ body {
         margin-top: 0;
         order: 1;
         margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 1;
     }
     
     .services {
@@ -1320,10 +1344,13 @@ body {
     .contact-item p {
         font-size: 0.85rem;
     }
-    
-    .floating-card {
+      .floating-card {
         width: 150px;
         padding: 0.8rem;
+        position: static;
+        z-index: 2;
+        margin: 0.3rem auto;
+        display: block;
     }
     
     .floating-card h3 {

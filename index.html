@@ -272,19 +272,33 @@
                         <h3>Location</h3>
                         <p>Design District, Creative City</p>
                     </div>
-                </div>
-                <form class="contact-form">
+                </div>                <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
+                        <div class="input-container">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
+                        <div class="input-container">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <div class="input-container">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
                 </form>
             </div>
         </div>

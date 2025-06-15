@@ -135,12 +135,11 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name') || contactForm.querySelector('input[type="text"]').value;
-        const email = formData.get('email') || contactForm.querySelector('input[type="email"]').value;
-        const subject = formData.get('subject') || contactForm.querySelectorAll('input[type="text"]')[1].value;
-        const message = formData.get('message') || contactForm.querySelector('textarea').value;
+        // Get form data using proper selectors
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
         
         // Simple validation
         if (!name || !email || !subject || !message) {
@@ -148,9 +147,26 @@ if (contactForm) {
             return;
         }
         
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+        
         // Simulate form submission
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitButton.disabled = true;
+        
+        setTimeout(() => {
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+        }, 2000);
     });
 }
 

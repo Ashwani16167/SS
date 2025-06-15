@@ -1040,37 +1040,51 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         flex-grow: 1;
-    }
-    
-    .hero-3d {
-        height: 250px;
+    }    .hero-3d {
+        height: 260px;
         margin: 1rem 0;
         order: 1;
         position: relative;
         z-index: 1;
         width: 100%;
         flex-shrink: 0;
-        overflow: hidden;
+        overflow: visible;
+        padding: 1rem;
     }
-    
-    /* Hide the original floating cards on mobile to prevent overlap */
+      /* Show floating cards on mobile in triangle formation */
     .floating-card {
-        display: none;
+        position: absolute;
+        z-index: 2;
+        width: 90px;
+        height: 90px;
+        padding: 0.7rem;
+        font-size: 0.8rem;
     }
     
-    /* Create new mobile-friendly cards */
-    .hero-3d::after {
-        content: '';
-        position: absolute;
-        top: 50%;
+    /* Triangle formation: Top card */
+    .card-1 {
+        top: 20px;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 20px;
-        animation: float 6s ease-in-out infinite;
-        opacity: 0.8;
+        transform: translateX(-50%);
+    }
+    
+    /* Triangle formation: Bottom left card */
+    .card-2 {
+        top: 140px;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+    
+    /* Triangle formation: Bottom right card */
+    .card-3 {
+        top: 140px;
+        right: 25%;
+        transform: translateX(50%);
+    }
+    
+    /* Remove the CSS pseudo-element since we're using real cards */
+    .hero-3d::after {
+        display: none;
     }
     
     .hero-text {
@@ -1343,6 +1357,186 @@ body {
     
     .contact-item h3 {
         font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.85rem;
+    }
+    
+    .stats {
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+      .form-group {
+        flex-direction: column;
+    }
+    
+    .input-container {
+        width: 100%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .rotating-cube {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .cube-face {
+        width: 150px;
+        height: 150px;
+        font-size: 2rem;
+    }
+    
+    .cube-face.front { transform: rotateY(0deg) translateZ(75px); }
+    .cube-face.back { transform: rotateY(180deg) translateZ(75px); }
+    .cube-face.right { transform: rotateY(90deg) translateZ(75px); }
+    .cube-face.left { transform: rotateY(-90deg) translateZ(75px); }
+    .cube-face.top { transform: rotateX(90deg) translateZ(75px); }
+    .cube-face.bottom { transform: rotateX(-90deg) translateZ(75px); }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .contact-form {
+        padding: 1rem;
+    }
+    .form-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .input-container {
+        width: 100%;
+    }
+    .contact-form .btn {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.6rem 0;
+    }    .hero {
+        padding-top: 70px;
+        height: auto;
+        min-height: 80vh;
+        padding-bottom: 3rem;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        padding: 1rem 0.5rem 1.5rem;
+        margin-top: 0;
+        gap: 1rem;
+        height: auto;
+        max-width: 100%;
+        align-self: flex-end;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+      .hero-text {
+        order: 2;
+        margin-top: 0.5rem;
+        position: relative;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+    }
+    
+    .hero-3d {
+        height: 150px;
+        margin-top: 0;
+        order: 1;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .services {
+        padding: 3rem 0;
+        margin-top: 0;
+        position: relative;
+        z-index: 2;
+        background: #f8f9fa;
+        width: 100%;
+        clear: both;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-top: 0;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+    }
+    
+    .hero-buttons {
+        gap: 0.8rem;
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        width: 200px;
+        max-width: 90%;
+    }
+    
+    .contact {
+        padding: 2rem 0;
+    }
+    
+    .contact-content {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .contact-info {
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-item {
+        padding: 0.8rem;
+        border-radius: 10px;
+    }
+    
+    .contact-item i {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-item h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
     }
     
     .contact-item p {
@@ -1358,11 +1552,20 @@ body {
     }
     
     .floating-card h3 {
-        font-size: 1rem;
+        font-size: 0.7rem;
+        line-height: 1;
+        margin: 0;
+        font-weight: 600;
     }
     
     .floating-card i {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    /* Ensure cards don't animate too much on mobile */
+    .floating-card {
+        animation-duration: 8s;
     }
     
     .contact-form {
@@ -1477,3 +1680,37 @@ body {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
+/* Hide rotating cube on mobile to prevent any layout conflicts */
+.rotating-cube {
+    display: none;
+}
+
+/* Mobile floating card content styling for triangle layout */
+    .floating-card i {
+        font-size: 1.3rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .floating-card h3 {
+        font-size: 0.65rem;
+        line-height: 1.1;
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    /* Staggered animations for triangle cards */
+    .card-1 {
+        animation-duration: 8s;
+        animation-delay: 0s;
+    }
+    
+    .card-2 {
+        animation-duration: 9s;
+        animation-delay: 1s;
+    }
+    
+    .card-3 {
+        animation-duration: 10s;
+        animation-delay: 2s;
+    }

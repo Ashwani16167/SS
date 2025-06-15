@@ -1,0 +1,19 @@
+{
+  "name": "ss-design-studio",
+  "version": "1.0.0",
+  "description": "SS Design Studio - Graphics & Social Media Management Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "design",
+    "graphics",
+    "social-media",
+    "portfolio",
+    "3d-website"
+  ],
+  "author": "SS Design Studio",
+  "license": "MIT"
+}

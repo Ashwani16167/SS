@@ -951,20 +951,52 @@ body {
 
 /* Prevent section overlapping on mobile */
 @media (max-width: 768px) {
-    section {
-        clear: both;
-        position: relative;
-    }
-    
     .hero {
+        height: auto;
+        min-height: 85vh;
+        padding-top: 80px;
+        padding-bottom: 4rem;
         position: relative;
         z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .services {
-        position: relative;
-        z-index: 1;
+        padding: 4rem 0;
         margin-top: 0;
+        position: relative;
+        z-index: 2;
+        background: #f8f9fa;
+        width: 100%;
+        clear: both;
+    }
+    
+    section {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Force proper section flow on mobile */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .hero, .services, .portfolio, .about, .contact {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 0;
+        transform: none !important;
+    }
+    
+    .services {
+        margin-top: 0 !important;
+        top: 0 !important;
     }
 }
 
@@ -982,11 +1014,14 @@ body {
         padding: 0.8rem 0;
     }    .hero {
         height: auto;
-        min-height: 80vh;
+        min-height: 85vh;
         padding-top: 80px;
-        padding-bottom: 3rem;
+        padding-bottom: 4rem;
         position: relative;
         z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .hero-content {
@@ -994,9 +1029,10 @@ body {
         text-align: center;
         gap: 1.5rem;
         padding: 1.5rem 1rem;
-        margin-top: 0.5rem;
+        margin-top: 0;
         height: auto;
         min-height: auto;
+        max-width: 100%;
     }
     
     .hero-3d {
@@ -1005,10 +1041,13 @@ body {
     }
     
     .services {
-        padding: 3rem 0;
+        padding: 4rem 0;
         margin-top: 0;
         position: relative;
-        z-index: 1;
+        z-index: 2;
+        background: #f8f9fa;
+        width: 100%;
+        clear: both;
     }
     
     .hero-title {
@@ -1154,10 +1193,13 @@ body {
     }    .hero {
         padding-top: 70px;
         height: auto;
-        min-height: 75vh;
-        padding-bottom: 2rem;
+        min-height: 80vh;
+        padding-bottom: 3rem;
         position: relative;
         z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .hero-content {
@@ -1165,6 +1207,7 @@ body {
         margin-top: 0;
         gap: 1rem;
         height: auto;
+        max-width: 100%;
     }
     
     .hero-3d {
@@ -1173,10 +1216,13 @@ body {
     }
     
     .services {
-        padding: 2.5rem 0;
+        padding: 3rem 0;
         margin-top: 0;
         position: relative;
-        z-index: 1;
+        z-index: 2;
+        background: #f8f9fa;
+        width: 100%;
+        clear: both;
     }
     
     .section-header {

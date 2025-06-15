@@ -1050,36 +1050,41 @@ body {
         flex-shrink: 0;
         overflow: visible;
         padding: 1rem;
+    }    /* Show floating cards on mobile in triangle formation */
+    .hero-3d .floating-card {
+        position: absolute !important;
+        z-index: 2 !important;
+        width: 90px !important;
+        height: 90px !important;
+        padding: 0.7rem !important;
+        font-size: 0.8rem !important;
+        display: block !important;
     }
-      /* Show floating cards on mobile in triangle formation */
-    .floating-card {
-        position: absolute;
-        z-index: 2;
-        width: 90px;
-        height: 90px;
-        padding: 0.7rem;
-        font-size: 0.8rem;
-    }
-    
-    /* Triangle formation: Top card */
-    .card-1 {
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
+      /* Triangle formation: Top card */
+    .hero-3d .card-1 {
+        top: 20px !important;
+        left: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: translateX(-50%) !important;
     }
     
     /* Triangle formation: Bottom left card */
-    .card-2 {
-        top: 140px;
-        left: 25%;
-        transform: translateX(-50%);
+    .hero-3d .card-2 {
+        top: 140px !important;
+        left: 25% !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: translateX(-50%) !important;
     }
     
     /* Triangle formation: Bottom right card */
-    .card-3 {
-        top: 140px;
-        right: 25%;
-        transform: translateX(50%);
+    .hero-3d .card-3 {
+        top: 140px !important;
+        left: auto !important;
+        right: 25% !important;
+        bottom: auto !important;
+        transform: translateX(50%) !important;
     }
     
     /* Remove the CSS pseudo-element since we're using real cards */
@@ -1698,19 +1703,18 @@ body {
         margin: 0;
         font-weight: 600;
     }
-    
-    /* Staggered animations for triangle cards */
-    .card-1 {
-        animation-duration: 8s;
-        animation-delay: 0s;
+      /* Staggered animations for triangle cards */
+    .hero-3d .card-1 {
+        animation-duration: 8s !important;
+        animation-delay: 0s !important;
     }
     
-    .card-2 {
-        animation-duration: 9s;
-        animation-delay: 1s;
+    .hero-3d .card-2 {
+        animation-duration: 9s !important;
+        animation-delay: 1s !important;
     }
     
-    .card-3 {
-        animation-duration: 10s;
-        animation-delay: 2s;
+    .hero-3d .card-3 {
+        animation-duration: 10s !important;
+        animation-delay: 2s !important;
     }
